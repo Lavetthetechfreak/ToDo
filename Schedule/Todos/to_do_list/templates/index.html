@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	table, th, td {
+    border: 1px solid black;
+     border: 1px solid black;
+    border-collapse: collapse;
+}
+h1{
+	text-align: center;
+	
+}
+a{
+	color: green;
+	font-size: 18px;
+	margin-bottom: 10px;
+	text-decoration: none;
+}
+
+</style>
+
+</head>
+<body>
+<h1>Things To Do</h1>
+<a href="/to_do_list/add">Create a todo</a>
+<table style="width:100%">
+<tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Time created</th>
+  </tr>
+{%for todo in todos%}
+ <tr>
+<td>{{todo.title}}</td>
+<td>{{todo.text}}</td>
+<td>{{todo.created_at}}</td>
+</tr>
+{%endfor%}
+</table>
+
+
+</body>
+</html>
